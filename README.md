@@ -1,14 +1,14 @@
-# Homie — public pages
+# Oikia — public pages
 
-The Privacy Policy, Terms of Service and Support page for the Homie iOS app,
+The Privacy Policy, Terms of Service and Support page for the Oikia iOS app,
 hosted on GitHub Pages so App Store Connect has a reachable URL for each.
 
 | Page | URL | Used for |
 |---|---|---|
-| `privacy.html` | https://zshgs.github.io/homieai-legal/privacy.html | App Store Connect **Privacy Policy URL** (required) |
-| `support.html` | https://zshgs.github.io/homieai-legal/support.html | App Store Connect **Support URL** (required) |
-| `terms.html` | https://zshgs.github.io/homieai-legal/terms.html | linked from the policy and from the app |
-| `index.html` | https://zshgs.github.io/homieai-legal/ | landing page, so the root is not a 404 |
+| `privacy.html` | https://zshgs.github.io/oikia-legal/privacy.html | App Store Connect **Privacy Policy URL** (required) |
+| `support.html` | https://zshgs.github.io/oikia-legal/support.html | App Store Connect **Support URL** (required) |
+| `terms.html` | https://zshgs.github.io/oikia-legal/terms.html | linked from the policy and from the app |
+| `index.html` | https://zshgs.github.io/oikia-legal/ | landing page, so the root is not a 404 |
 
 ## Do not edit the HTML here
 
@@ -27,8 +27,8 @@ To change the text:
 # in the homieai repo
 $EDITOR src/features/legal/content.ts
 npm run build:legal          # regenerates public/
-cp public/*.html ../homieai-legal/
-git -C ../homieai-legal commit -am "Update policies" && git -C ../homieai-legal push
+cp public/*.html ../oikia-legal/
+git -C ../oikia-legal commit -am "Update policies" && git -C ../oikia-legal push
 ```
 
 The pages are self-contained — inlined CSS, no scripts, no network requests, and
