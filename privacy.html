@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · Oikia</title>
+<link rel="icon" type="image/png" href="./logo.png">
+<link rel="apple-touch-icon" href="./logo.png">
 <style>:root {
   color-scheme: light dark;
   --brand: #4F46E5;
@@ -49,6 +51,7 @@ p  { margin: 0 0 12px; }
 ul { margin: 0 0 12px; padding-left: 22px; }
 li { margin: 0 0 8px; }
 a  { color: var(--brand); }
+.mark { display: block; width: 44px; height: 44px; border-radius: 10px; margin: 0 0 14px; }
 .updated { color: var(--text-tertiary); font-size: 14px; margin: 0 0 24px; }
 .intro { color: var(--text-secondary); }
 .tagline { color: var(--brand); font-size: 17px; font-weight: 500; margin: 0 0 16px; }
@@ -57,42 +60,62 @@ footer a { color: var(--text-secondary); }</style>
 </head>
 <body>
 <main>
+<img class="mark" src="./logo.png" alt="Oikia" width="44" height="44">
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated August 2, 2026</p>
+<p class="updated">Last updated October 8, 2026</p>
 <p class="intro">This policy explains what Oikia (&quot;we&quot;, &quot;us&quot;), operated by Jianping Liu, collects, why, and the choices you have. Oikia is a shared-household chore manager.</p>
 <h2>Information we collect</h2>
 <ul>
   <li>Account: your email address, and a display name (defaulted from your email or provided by Sign in with Apple / Google).</li>
-  <li>Household content you create: houses, chores, schedules, swap requests, availability, shopping lists, house rules, and chat messages.</li>
+  <li>Household content you create: houses, chores, schedules, swap requests, availability, shopping lists, house rules, expenses, recipes, meal plans, inventory, and chat messages.</li>
+  <li>Calendar data, if you connect a calendar: the events on the calendars you choose to sync, and an encrypted access token for that account. We request the narrowest scopes that make two-way sync work, and we never read calendars you have not selected.</li>
+  <li>Receipt photographs, if you use receipt scanning: the image you take, the text extracted from it, and the line items and totals you confirm.</li>
   <li>Device tokens for delivering push notifications (if you enable them).</li>
   <li>Basic diagnostics: crash reports and error events, only if crash reporting is enabled for your build.</li>
+  <li>Aggregate counts of advertisements shown per household per day. These carry no identifier for you or your device.</li>
 </ul>
 <h2>How we use it</h2>
 <ul>
   <li>To provide the service: authenticate you, sync your household data across members, generate fair chore rotations, and deliver reminders.</li>
-  <li>To answer requests you send to the in-app AI assistant.</li>
+  <li>To answer requests you send to the in-app AI assistant, and to let it look things up in your household’s own data when you ask a question that needs it.</li>
+  <li>To read receipts you photograph, so their lines can be split between housemates without typing them in.</li>
   <li>To keep the service reliable and secure (diagnosing crashes and abuse).</li>
+  <li>To enforce the limits of your plan, and to count advertisements shown so a household can be charged nothing for the free tier.</li>
   <li>We do not sell your personal information, and we do not use it for cross-app advertising or tracking.</li>
 </ul>
 <h2>Who we share it with</h2>
 <ul>
   <li>Supabase (our hosting, database, and authentication provider) stores your account and household data.</li>
   <li>DeepSeek processes the text of messages you send to the AI assistant to generate a reply. Do not send sensitive information to the assistant.</li>
+  <li>When you ask the assistant a question about your household, short excerpts of your own household data are sent to DeepSeek as part of that question. Content marked sensitive in the app is never sent, and is never turned into a search index.</li>
+  <li>OpenAI receives short excerpts of household content to compute the numeric representations that make search work. It receives no account identifiers, and Oikia has instructed it not to train on this data.</li>
+  <li>Google Document AI receives receipt images you choose to scan, and returns the text it finds. Images are stored in your household’s private storage, not in a public bucket.</li>
+  <li>Google Calendar and Microsoft Outlook receive and return event data for the calendars you connect, for as long as you keep them connected.</li>
+  <li>Apple and Google process subscription purchases. We receive confirmation that a purchase happened; we never see your payment details.</li>
   <li>Expo push infrastructure delivers notifications to your device.</li>
+  <li>Google AdMob delivers advertisements on the free tier. Its SDK may process device and network information, ad interactions and diagnostics to deliver and measure ads and prevent fraud. We do not send your household content or email address to AdMob.</li>
   <li>Sentry (if enabled) receives crash and error diagnostics.</li>
   <li>Housemates in a house you join can see the shared content of that house, and your display name and avatar.</li>
+</ul>
+<h2>Advertising</h2>
+<ul>
+  <li>The free tier can show advertisements in a small number of fixed places. Households on the paid tier never see them.</li>
+  <li>We request non-personalised ads and do not use your household content to target them. The ad SDK may still process device information for delivery, measurement and fraud prevention. Where required, we ask for your consent before requesting ads.</li>
 </ul>
 <h2>Data retention and deletion</h2>
 <ul>
   <li>We keep your data while your account is active.</li>
+  <li>Some categories expire sooner: raw provider output from receipt scanning is discarded after six months (the receipt itself is kept), background-job records after ninety days, aggregate ad counts after thirteen months, and the security audit trail after twenty-four months.</li>
+  <li>You can export a copy of your data at any time from Settings → Export my data. The file contains what you wrote — your messages, your points, your share of expenses, the households you belong to — and never anyone else’s private content or any credential.</li>
   <li>You can delete your account at any time from Settings → Delete account. This permanently removes your profile, chores, messages, and history; houses you own are transferred to another member or deleted if you are the only member.</li>
+  <li>Leaving a single household deletes your availability, preferences and notifications there, disconnects any calendar you connected and destroys the stored tokens for it. Your conversations become a read-only archive rather than being erased, because the other side of a message keeps their copy. Work the household still relies on stays, and the shared ledger of points and expenses is history that cannot be rewritten.</li>
 </ul>
 <h2>Security</h2>
 <p>Data is transmitted over encrypted connections (HTTPS/TLS). Access to household data is enforced per-house at the database level. Session tokens are stored encrypted on your device.</p>
 <h2>Children</h2>
 <p>Oikia is not directed to children under 13 (or the minimum age in your country), and we do not knowingly collect their data.</p>
 <h2>Your rights</h2>
-<p>Depending on where you live, you may have rights to access, correct, export, or delete your data. Account deletion is available in-app; for other requests contact us.</p>
+<p>Depending on where you live, you may have rights to access, correct, export, or delete your data. Export and account deletion are both available in-app, without contacting us and without waiting; for anything else, write to us.</p>
 <h2>Contact</h2>
 <p>Questions about this policy: liujianpingau@gmail.com</p>
 </main>
