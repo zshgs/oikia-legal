@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oikia</title>
+<link rel="icon" type="image/png" href="./logo.png">
+<link rel="apple-touch-icon" href="./logo.png">
+<meta name="description" content="Oikia is a free iPhone app for shared homes: fair chore rotation, split bills and expenses, a shared calendar and shopping list, house chat, and Hestia, an AI assistant that keeps it all running.">
+<meta property="og:title" content="Oikia">
+<meta property="og:description" content="Oikia is a free iPhone app for shared homes: fair chore rotation, split bills and expenses, a shared calendar and shopping list, house chat, and Hestia, an AI assistant that keeps it all running.">
+<meta property="og:image" content="https://zshgs.github.io/oikia-legal/logo.png">
+<meta name="apple-itunes-app" content="app-id=6797183540">
 <style>:root {
   color-scheme: light dark;
   --brand: #4F46E5;
@@ -49,25 +56,55 @@ p  { margin: 0 0 12px; }
 ul { margin: 0 0 12px; padding-left: 22px; }
 li { margin: 0 0 8px; }
 a  { color: var(--brand); }
+.mark { display: block; width: 44px; height: 44px; border-radius: 10px; margin: 0 0 14px; }
 .updated { color: var(--text-tertiary); font-size: 14px; margin: 0 0 24px; }
 .intro { color: var(--text-secondary); }
 .tagline { color: var(--brand); font-size: 17px; font-weight: 500; margin: 0 0 16px; }
+.btn { display: inline-block; background: var(--brand); color: var(--surface-card); font-weight: 600; text-decoration: none; padding: 12px 22px; border-radius: 999px; border: 0; font-size: 16px; cursor: pointer; margin: 4px 8px 4px 0; }
+.btn.ghost { background: transparent; color: var(--brand); border: 1px solid var(--border); }
+.features { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.features li { border: 1px solid var(--border); border-radius: 16px; padding: 14px 16px; margin: 0; }
+.features strong { display: block; margin-bottom: 2px; }
+.code { font: 700 28px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.08em; margin: 8px 0 16px; }
 footer { max-width: 680px; margin: 24px auto 0; color: var(--text-tertiary); font-size: 13px; text-align: center; }
 footer a { color: var(--text-secondary); }</style>
 </head>
 <body>
 <main>
-<h1>Oikia</h1>
+<img class="mark" src="./logo.png" alt="Oikia" width="44" height="44">
+<h1>Oikia — chores, bills and chat for shared homes</h1>
 <p class="tagline">Where a place becomes a home.</p>
-<p class="intro">Oikia is the intelligent operating system for shared living. Organize chores, manage expenses, coordinate schedules, and communicate effortlessly — all in one place. Inspired by the ancient Greek <em>oikia</em>, where a household is more than a building, Oikia helps people build homes that run with clarity, fairness, and harmony.</p>
-<h2>Documents</h2>
-<ul>
-  <li><a href="./privacy.html">Privacy Policy</a> — what Oikia collects and why</li>
-  <li><a href="./terms.html">Terms of Service</a></li>
-  <li><a href="./support.html">Support</a> — how to get help, and how to delete your account</li>
+<p class="intro">One app for roommates, flatmates, couples and families: who does which chore, who paid for what, and what is happening this week — kept fair automatically.</p>
+<p><a class="btn" href="https://apps.apple.com/app/id6797183540">Download on the App Store</a></p>
+<h2>What Oikia does</h2>
+<ul class="features">
+  <li><strong>Chores that rotate fairly</strong>Weighted by everyone's load and availability, so no one does more than their share.</li>
+  <li><strong>Split bills and expenses</strong>Rent, groceries and utilities, with an honest running balance of who owes whom.</li>
+  <li><strong>Shared calendar and lists</strong>House events, shopping lists, house rules and documents in one place.</li>
+  <li><strong>House chat</strong>A group chat for the whole house, plus direct messages.</li>
+  <li><strong>Hestia, your house assistant</strong>Ask who is up next, swap a chore in plain language, or let her just do it.</li>
+  <li><strong>Reminders</strong>Gentle nudges so nothing gets forgotten — and no one has to nag.</li>
 </ul>
+<h2>How it works</h2>
+<ol>
+  <li>Create a house in Oikia — it takes a minute.</li>
+  <li>Share the invite link with your housemates.</li>
+  <li>Add your chores and bills. Oikia rotates them fairly and keeps the balance.</li>
+</ol>
+<h2>Who it is for</h2>
+<p>Roommates and flatmates sharing a rental, students in shared housing, couples moving in together, and families who want the house to run without the arguments.</p>
+<h2>Why "Oikia"?</h2>
+<p>Oikia <em>(oh-KEE-ah)</em> is the ancient Greek word for a household — not just the building, but the people, responsibilities and daily life shared within it. Oikia helps homes run with clarity, fairness and harmony.</p>
+<h2>Questions</h2>
+<h3>Is Oikia free?</h3>
+<p>Yes. Oikia is free to download and use.</p>
+<h3>Does everyone in the house need the app?</h3>
+<p>Everyone who wants to take part does — chores and bills are shared between members. Invite them with the link from the Members screen.</p>
+<h3>Is it on Android?</h3>
+<p>Oikia is on iPhone today. Android is on the way.</p>
 <h2>Contact</h2>
-<p>Email <a href="mailto:liujianpingau@gmail.com">liujianpingau@gmail.com</a>.</p>
+<p>Email <a href="mailto:liujianpingau@gmail.com">liujianpingau@gmail.com</a>, or see <a href="./support.html">Support</a>.</p>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Oikia","operatingSystem":"iOS","applicationCategory":"LifestyleApplication","description":"Oikia is a free iPhone app for shared homes: fair chore rotation, split bills and expenses, a shared calendar and shopping list, house chat, and Hestia, an AI assistant that keeps it all running.","url":"https://zshgs.github.io/oikia-legal","downloadUrl":"https://apps.apple.com/app/id6797183540","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 </main>
 <footer>
   <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./support.html">Support</a>
